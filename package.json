@@ -1,0 +1,37 @@
+{
+  "name": "ts-lru-cache-ttl-impl",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Least Recently Used (LRU) cache with Time-to-Live (TTL) support implemented in TypeScript",
+  "scripts": {
+    "start": "npm run test",
+    "test": "vitest watch",
+    "test:lru-cache": "vitest run src/lru-cache.test.ts",
+    "test:prod": "vitest run --reporter=junit src/lru-cache.test.ts --output-file=reports/test-results-lru.xml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erkobridee/ts-lru-cache-ttl-impl.git"
+  },
+  "keywords": [
+    "typescript",
+    "LRU",
+    "TTL",
+    "cache",
+    "implementation",
+    "vitest"
+  ],
+  "author": "Erko Bridee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erkobridee/ts-lru-cache-ttl-impl/issues"
+  },
+  "homepage": "https://github.com/erkobridee/ts-lru-cache-ttl-impl#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.2",
+    "esbuild": "^0.21.5",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
