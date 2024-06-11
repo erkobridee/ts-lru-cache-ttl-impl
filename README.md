@@ -12,3 +12,13 @@ npm i -D \
   typescript \
   vitest
 ```
+
+## References
+
+- [LRU Cache Data Structure | Interview Cake](https://www.interviewcake.com/concept/java/lru-cache)
+
+- [LRU Cache Implementation | enjoy algorithms](https://www.enjoyalgorithms.com/blog/implement-least-recently-used-cache)
+
+- [Complete Tutorial on LRU Cache with Implementations | GeeksforGeeks](https://www.geeksforgeeks.org/lru-cache-implementation/)
+
+- [LRU Cache | Redis](https://redis.io/glossary/lru-cache/)
