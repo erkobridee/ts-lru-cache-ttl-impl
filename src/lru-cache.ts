@@ -51,7 +51,7 @@ export function createLRUCacheProvider<T>({ ttl, itemLimit }: LRUCacheProviderOp
    */
   const set = (key: string, value: T) => {
     if (cache.size >= itemLimit) {
-      const [firstKey] = cache.keys();
+      const firstKey = cache.keys().next().value;
       cache.delete(firstKey);
     }
 
