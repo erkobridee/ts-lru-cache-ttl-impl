@@ -28,7 +28,7 @@ jobs:
       - name: Run unit tests
         run: npm run test:prod
       - name: Report test results (LRU)
-        uses: mikepenz/action-junit-report@v4
+        uses: mikepenz/action-junit-report@v5
         if: success() || failure()
         with:
           report_paths: '**/test-results-lru.xml'
