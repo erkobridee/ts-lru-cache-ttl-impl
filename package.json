@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/erkobridee/ts-lru-cache-ttl-impl#readme",
   "devDependencies": {
-    "@types/jest": "^29.5.12",
+    "@types/jest": "^30.0.0",
     "@types/node": "^22.0.0",
     "esbuild": "^0.25.0",
     "typescript": "^5.4.5",
