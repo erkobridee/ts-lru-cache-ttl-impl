@@ -7,7 +7,8 @@
     "start": "npm run test",
     "test": "vitest watch",
     "test:lru-cache": "vitest run src/lru-cache.test.ts",
-    "test:prod": "vitest run --reporter=junit src/lru-cache.test.ts --output-file=reports/test-results-lru.xml"
+    "test:prod": "vitest run --reporter=junit src/lru-cache.test.ts --output-file=reports/test-results-lru.xml",
+    "tsc": "npx tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -28,10 +29,14 @@
   },
   "homepage": "https://github.com/erkobridee/ts-lru-cache-ttl-impl#readme",
   "devDependencies": {
-    "@types/jest": "^30.0.0",
-    "@types/node": "^26.0.0",
-    "esbuild": "^0.28.0",
-    "typescript": "^6.0.0",
-    "vitest": "^4.0.0"
+    "@types/jest": "30.0.0",
+    "@types/node": "26.6.6",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2",
+    "vitest": "5.1.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "fsevents@2.3.3": true
   }
 }
