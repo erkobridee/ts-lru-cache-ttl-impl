@@ -1,4 +1,5 @@
-import { createLRUCacheProvider } from '../src/lru-cache.js';
+import { describe, it, expect } from 'vitest';
+import { createLRUCacheProvider } from '~/lru-cache.js';
 
 const sleep = (timeoutInMS: number) => new Promise((resolve) => setTimeout(resolve, timeoutInMS));
 
