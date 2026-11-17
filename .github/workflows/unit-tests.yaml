@@ -1,15 +1,20 @@
 name: Run unit tests
 
 on:
+  workflow_dispatch:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
+
+concurrency:
+  group: pr-to-main-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
 
 permissions:
-  contents: read
-  pull-requests: read
-  issues: write
+  pull-requests: write
   checks: write
 
 jobs:
@@ -18,15 +23,19 @@ jobs:
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v7
+
       - name: Use Node JS LTS 20.x
         uses: actions/setup-node@v7
         with:
           node-version: 26.x
           cache: npm
+
       - name: Install dependencies
         run: npm ci
+
       - name: Run unit tests
         run: npm run test:prod
+
       - name: Report test results (LRU)
         uses: mikepenz/action-junit-report@v6
         if: success() || failure()
